@@ -305,15 +305,34 @@
     </section>
 
 	<br>
-	<div class="container">
-		<div class="row justify-content-center">
-		  <div class="col-md-8">
-			<div class="embed-responsive embed-responsive-16by9">
-				<iframe class="img-fluid" src="images/How my team viewed me.jpg"></iframe>
+	<div class="container-fluid p-0">
+		<div class="row no-gutters">
+		  <div class="col-12">
+			<div class="image-container">
+			  <img src="images/How my team viewed me.jpg" alt="How my team viewed me">
 			</div>
 		  </div>
-	    </div>
-	</div>
+		</div>
+	  </div>
+	  
+	  <style>
+		.image-container {
+		  position: relative;
+		  width: 100%;
+		  height: 0;
+		  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+		  overflow: hidden;
+		}
+		
+		.image-container img {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover; /* Ensures the image covers the container */
+		}
+	  </style>
 	<br>
 
 	
